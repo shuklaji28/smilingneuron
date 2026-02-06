@@ -45,7 +45,7 @@ body {
 
   background-size: 240px 240px;
   opacity: 0.35;
-  z-index: 0;
+  z-index: 3;
 }
 
 /* 🙂 HIDDEN EMOJI (CLICKABLE) */
@@ -80,13 +80,30 @@ body {
 
   z-index: 2;
 }
+/* ✨ CURSOR GLOW (VISUAL ONLY) */
+.container .cursor-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    120px circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.30),
+    rgba(255, 255, 255, 0.2) 15%,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 65%
+  );
+
+  filter: blur(6px);
+  z-index: 3; /* below content, above stars */
+}
 
 /* MAIN CONTENT */
 .content {
   position: relative;
   max-width: 720px;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
    pointer-events: none;
 }
 .content a {

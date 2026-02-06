@@ -33,6 +33,7 @@ export default function Home() {
 
   return (
     <main className="container">
+      <div className="cursor-glow" />
       {/* Hidden clickable emoji */}
       {pos && (
         <Link
